@@ -69,9 +69,9 @@ $('#doctorregisterbtn').on('click', ()=> {
             });
         }
 
-        $('#doctoridinput').empty();
-        $('#doctorpasswordinput').empty();
-    
+    document.getElementById('doctoridinput').value = '';
+    document.getElementById('doctorpasswordinput').value = '';
+        
     } else {
         alert("fill before click the button!...");
     }
@@ -102,8 +102,8 @@ $('#nurseregisterbtn').on('click', ()=> {
             });
         }
 
-        // $('#nurseidinput').text('');
-        // $('#nursepasswordinput').text('');
+    document.getElementById('nurseidinput').value = '';
+    document.getElementById('nursepasswordinput').value = '';    
     
     }
 
@@ -163,6 +163,9 @@ $('#patientloginbtn').on('click', ()=>{
         });
     });            
 
+    document.getElementById('patientidinput').value = '';
+    document.getElementById('patientpasswordinput').value = '';
+    
 });
 
 
@@ -197,7 +200,10 @@ $('#doctorloginbtn').on('click', ()=>{
         });
 
     });
-
+        
+    document.getElementById('doctoridinput').value = '';
+    document.getElementById('doctorpasswordinput').value = '';
+    
 });
 
 $('#nurseloginbtn').on('click', (clicked)=> {
@@ -216,6 +222,9 @@ $('#nurseloginbtn').on('click', (clicked)=> {
         });
 
     });
+    
+    document.getElementById('nurseidinput').value = '';
+    document.getElementById('nursepasswordinput').value = '';
     
 });
 
@@ -262,6 +271,19 @@ $('#patientregisterbtnthroughnurse').on('click',()=> {
         // gender : gender
     });            
 
+        document.getElementById('nursepatientregistername').value = '';
+    document.getElementById('nursepatientregisterage').value = '';
+        document.getElementById('nursepatientregisterheight').value = '';
+    document.getElementById('nursepatientregisterweight').value = '';
+        document.getElementById('nursepatientregisterprescription').value = '';
+    document.getElementById('nursepatientregisterphone').value = '';
+        document.getElementById('nursepatientregisteremergency').value = '';
+    document.getElementById('nursepatientregisterbp').value = '';
+    document.getElementById('nursepatientregistersugarlevel').value = '';
+    document.getElementById('nursepatientregisterage').value = '';
+    
+    alert("patient details register succesfully!...");
+    
 });
 
 
@@ -297,8 +319,6 @@ function divCreator(id, name, age, height, weight, bp, sugarlevel, prescription,
     value += '</h3></div></div>';
     return value;
 }
-
-console.log(divCreator('varshni','varshni',20,155,79,"80-120","normal","none",108,1423692369));
 
 /* 
 
