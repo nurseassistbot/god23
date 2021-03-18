@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+
+</head>
+<body>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyBbmeTilerPGM7zrv8xoDd9Wc5Hn9L5mRM",
+        authDomain: "nurseassistbot.firebaseapp.com",
+        databaseURL: "https://nurseassistbot-default-rtdb.firebaseio.com",
+        projectId: "nurseassistbot",
+        storageBucket: "nurseassistbot.appspot.com",
+        messagingSenderId: "659932729633",
+        appId: "1:659932729633:web:6963c40fd265210dee6e60",
+        measurementId: "G-YVZC4CSMYY"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
+
+    <!-- scripts for jQuery module for easier implementation of code in js files -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <div id="home" class="home">
+
+        <header> 
+            <img id="homelogo" src="./image/doctorLogo.png" alt="doctor logo">
+            <h1 id="hospitalname"> Médecin  </h1>
+            <p id="homeslogan">PREVENTION <br> IS BETTER THAN CURE</p>
+            <button id="gotohome">HOME</button>
+        </header>
+
+        <div class="homeloginpage" id="homeloginpage">
+
+            <div class="buttons" id="doctorloginbtn" > 
+                <h2>Doctor login</h2>  
+                <div class="doctorid">
+                    <label for="doctorID">Doctor ID :</label>
+                    <input id="doctoridinput" type="text" name="doctorID">
+                </div>
+                <div class="doctorpassword">
+                    <label for="doctorpassword">Password :</label>
+                    <input id="doctorpasswordinput" type="password" name="doctorpassword">
+                </div>
+                <div id="registerloginbtn">
+                    <button id="doctorregisterbtn"> REGISTER</button>
+                    <button id="doctorloginbtn"> LOGIN</button>
+                </div>
+            </div>
+
+            <div class="buttons" id="nurseloginbtn"  > 
+                <h2>Nurse login</h2>   
+                <div class="nurseid">
+                    <label for="nurseID">Nurse ID :</label>
+                    <input id="nurseidinput" type="text" name="nurseID">
+                </div>
+                <div class="nursepassword">
+                    <label for="nursepassword">Password :</label>
+                    <input id="nursepasswordinput" type="password" name="nursepassword">
+                </div>
+                <div id="registerloginbtn">
+                    <button id="nurseregisterbtn"> REGISTER</button>
+                    <button id="nurseloginbtn"> LOGIN</button>
+                </div>
+            </div>
+
+            <div class="buttons" id="patientloginbtn"> 
+                <h2>Patient login</h2>  
+                <div class="patientid">
+                    <label for="patientID">Access ID :</label>
+                    <input id="patientidinput" type="text" name="patientID">
+                </div>
+                <div class="patientpassword">
+                    <label for="patientpassword">Password :</label>
+                    <input id="patientpasswordinput" type="password" name="patientpassword">
+                </div>
+                <div id="registerloginbtn">
+                    <!-- <button id="patientregisterbtn"> REGISTER</button> -->
+                    <button id="patientloginbtn"> LOGIN</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="logincolumn" id="logincolumn">
+            
+            <div class="patientregistereventdiv" id="patientregistereventdiv">
+                <div class="line">
+                    <label for="patientname">Patient Name : </label>
+                    <input type="text" placeholder="name" name="patientname" id="nursepatientregistername">
+                </div>
+
+                <div class="line">
+                    <label for="patientage">Age : </label>
+                    <input type="text" placeholder="age" name="patientage" id="nursepatientregisterage">
+                </div>
+
+                <div class="line">
+                    <label for="patientweight">Weight : </label>
+                    <input type="text" placeholder="weight" name="patientweight" id="nursepatientregisterweight">
+                </div>
+
+                <div class="line">
+                    <label for="patientheight">Height : </label>
+                    <input type="text" placeholder="height" name="patientheight" id="nursepatientregisterheight">
+                    <button type="button" id="heighttakebtn">Take Reading</button>
+                </div>
+            
+                <div class="line">
+                    <label for="patientphone">Phone : </label>
+                    <input type="text" placeholder="phone" name="patientphone" id="nursepatientregisterphone">
+                </div>
+            
+                <div class="line">
+                    <label for="patientemergency">Emergency : </label>
+                    <input type="text" placeholder="emergency number" name="patientemergency" id="nursepatientregisteremergency">
+                </div>
+            
+                <div class="line">
+                    <label for="patientbp">BP : </label>
+                    <input type="text" placeholder="blood pressure rate" name="patientbp" id="nursepatientregisterbp">
+                </div>
+                        
+                <div class="line">
+                    <label for="patientsugarlevel">Sugar Level : </label>
+                    <input type="text" placeholder="sugarlevel" name="patientsugarlevel" id="nursepatientregistersugarlevel">
+                </div>
+            
+                <div class="line">
+                    <label for="patientprescription">Prescription : </label>
+                    <input type="text" placeholder="prescription" name="patientprescription" id="nursepatientregisterprescription">
+                </div>
+            
+                <div class="line">
+                    <label for="patientbloodgroup">Blood Group : </label>
+                    <input type="text" placeholder="bloodgroup" name="patientbloodgroup" id="nursepatientregisterbloodgroup">
+                </div>
+
+                <div class="line">
+                    <label for="patientgender">Gender : </label>
+                    <input type="text" placeholder="gender" name="patientgender" id="nursepatientregistergender">
+                </div>
+
+                <button type="submit" id="patientregisterbtnthroughnurse">REGISTER PATIENT</button>
+
+            </div>
+
+        </div>
+
+        <footer id="homeabout" class="homeabout">
+            <div class="empty">
+            </div>
+            <div class="aboutus">
+                <h2 style="text-decoration: underline;">About us</h2>
+                <h3>contact : 99988 66555</h3>
+                <h3>location : chennai </h3>
+                <h3>Nurse Assist Bot</h3>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+
+    <script src="./js/index.js"></script>
+
+</html>
